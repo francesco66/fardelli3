@@ -11,11 +11,11 @@ class Post extends Model
 
     public function user()
     {
-        return $this->belongsTo('user_id');
+        return $this->belongsTo(User::class);
     }
 
-    public function author()
-    {
-        return $this->belongsTo('user_id', 'user->name');
-    }
+    // public function author()
+    // {
+    //     return $this->belongsTo(User::class, 'user_id');
+    // }
 }
