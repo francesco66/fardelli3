@@ -9,6 +9,7 @@
         <p>{{ $post->excerpt }}</p>
         <p>{{ $post->body }}</p>
 
+        <a href="posts/{{ $post->id }}">LEGGI</a>
     @endforeach
 
 </div>
