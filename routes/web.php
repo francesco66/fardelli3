@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +23,12 @@ Route::get('/', function () {
 
 Route::resource('/posts', PostController::class);
 
+
+// Route::get('/authors/{author:username}', function (User $author) {
+//     return view('posts.index', [
+//         'posts' => $author->posts
+//     ]);
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
