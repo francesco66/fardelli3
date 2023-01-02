@@ -5,12 +5,12 @@
 
         <p>{{ $post->title }}</p>
         <p>Pubblicato il {{ $post->created_at }}<span> da <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a></span></p>
-        <p>Categoria: <a href="#">{{ $post->category->name }}</a></p>
+        <p>Categoria: <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
 
         <p>{{ $post->excerpt }}</p>
         <p>{{ $post->body }}</p>
 
-        <a href="posts/{{ $post->id }}">LEGGI</a>
+        <a href="/posts/{{ $post->id }}">LEGGI</a>
     @endforeach
 
 </div>
