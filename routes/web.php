@@ -24,18 +24,17 @@ Route::get('/', function () {
 
 Route::resource('/posts', PostController::class);
 
+// Route::get('/categories/{category:slug}', function (Category $category) {
+//     return view('posts.index', [
+//         'posts' => $category->posts
+//     ]);
+// });
 
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('posts.index', [
-        'posts' => $category->posts
-    ]);
-});
-
-Route::get('/authors/{author:username}', function (User $author) {
-    return view('posts.index', [
-        'posts' => $author->posts
-    ]);
-});
+// Route::get('/authors/{author:username}', function (User $author) {
+//     return view('posts.index', [
+//         'posts' => $author->posts
+//     ]);
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
