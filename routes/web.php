@@ -17,10 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// TEST
+Route::get('/pagetest', function () {
+    return view('pagetest');
+});
+
+
 Route::get('/', function () {
     return view('home');
 });
-
 
 Route::resource('/posts', PostController::class);
 
